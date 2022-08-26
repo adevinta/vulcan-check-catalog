@@ -1,0 +1,3 @@
+Description = "Check3 description"
+Timeout = 120
+RequiredVars = ["var1"]

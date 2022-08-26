@@ -1,0 +1,27 @@
+{
+	"checktypes": [
+		{
+			"name": "check1",
+			"description": "Check1 description",
+			"image": "https://example.com/check1:master",
+			"timeout": 3600,
+			"options": "{\"depth\": 2, \"active\": true, \"url\": \"http://example.com\"}",
+			"required_vars": null,
+			"assets": [
+				"WebAddress"
+			]
+		},
+		{
+			"name": "check3",
+			"description": "Check3 description",
+			"image": "https://example.com/check3:master",
+			"timeout": 120,
+			"required_vars": [
+				"var1"
+			],
+			"assets": [
+				"IP"
+			]
+		}
+	]
+}

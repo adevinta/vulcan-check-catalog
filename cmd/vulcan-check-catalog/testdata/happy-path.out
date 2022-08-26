@@ -1,0 +1,28 @@
+{
+	"checktypes": [
+		{
+			"name": "check1",
+			"description": "Check1 description",
+			"image": "https://example.com/check1:stable",
+			"timeout": 3600,
+			"options": "{\"depth\": 2, \"active\": true, \"url\": \"http://example.com\"}",
+			"required_vars": null,
+			"assets": [
+				"WebAddress"
+			]
+		},
+		{
+			"name": "check2",
+			"description": "Check2 description",
+			"image": "https://example.com/check2:stable",
+			"timeout": 60,
+			"required_vars": [
+				"var1",
+				"var2"
+			],
+			"assets": [
+				"Hostname"
+			]
+		}
+	]
+}
