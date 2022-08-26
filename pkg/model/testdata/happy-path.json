@@ -1,0 +1,24 @@
+{
+  "checktypes": [
+    {
+      "name": "check1",
+      "description": "A",
+      "timeout": 3600,
+      "image": "example.com/check1:stable",
+      "required_vars": null,
+      "assets": [
+        "Hostname"
+      ]
+    },
+    {
+      "name": "check2",
+      "description": "B",
+      "image": "example.com/check2:stable",
+      "required_vars": null,
+      "assets": [
+        "Hostname",
+        "IP"
+      ]
+    }
+  ]
+}

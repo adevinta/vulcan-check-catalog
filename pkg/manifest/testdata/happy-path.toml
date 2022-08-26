@@ -1,0 +1,4 @@
+Description = "Check1 description"
+AssetTypes = ["WebAddress"]
+Timeout = 3600
+Options = """{"depth": 2, "active": true, "url": "http://example.com"}"""

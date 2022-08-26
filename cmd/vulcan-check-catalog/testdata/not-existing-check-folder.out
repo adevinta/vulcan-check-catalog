@@ -1,0 +1,1 @@
+level=error msg="path [testdata/not-existing] is not a directory"

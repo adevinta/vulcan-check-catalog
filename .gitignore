@@ -1,0 +1,2 @@
+cmd/vulcan-check-catalog/testdata/output/*.json
+coverage.out

@@ -1,0 +1,1 @@
+level=error msg="can't fetch checks from http://127.0.0.1/non-existing.json URL: unexpected status code fetching checktypes from URL"

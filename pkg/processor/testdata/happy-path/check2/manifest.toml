@@ -1,0 +1,4 @@
+Description = "Check2 description"
+AssetTypes = ["Hostname"]
+Timeout = 60
+RequiredVars = ["var1", "var2"]
