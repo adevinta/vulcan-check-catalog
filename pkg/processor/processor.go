@@ -69,6 +69,10 @@ func (r *Runner) Run() (model.Checktypes, error) {
 		// Potential check folder found.
 		checkName := f.Name()
 		md, err := manifest.Read(manifestFilePath)
+		if err != nil {
+			r.logger.Warnf("could not read manisfest file for check [%s]. Skipping.", checkName)
+			continue
+		}
 		checktype := model.Checktype{
 			Name:         checkName,
 			Image:        fmt.Sprintf("%s/%s:%s", r.registryBaseURL, checkName, r.imageTag),
