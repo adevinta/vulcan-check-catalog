@@ -4,7 +4,41 @@
 [![License: MIT][license-img]][license]
 
 # vulcan-check-catalog
+
 Vulcan Check Catalog Generator
+
+## ⚠️ Alpha status
+
+This tool is under active development and the expected input and output may change.
+
+## Installing
+
+From source code
+
+```sh
+# Last release version
+go install github.com/adevinta/vulcan-check-catalog/cmd/vulcan-check-catalog@latest
+
+# The main version
+go install github.com/adevinta/vulcan-check-catalog/cmd/vulcan-check-catalog@main
+```
+
+## Running
+
+Usage:
+```sh
+usage: vulcan-check-catalog [optional flags] [required flags] <path to checks>
+
+Flags:
+  -checktypes-url-list string
+        Checktypes URL list. Optional.
+  -output string
+        Output file path. Optional.
+  -registry-url string
+        Docker image registry base URL. Required.
+  -tag string
+        Docker image tag. Optional.
+```
 
 ---
 
