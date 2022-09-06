@@ -1,6 +1,7 @@
 package processor
 
 import (
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
 
@@ -82,7 +83,13 @@ func (r *Runner) Run() (model.Checktypes, error) {
 			Assets:       md.AssetTypes,
 		}
 		if md.Options != "" {
-			checktype.Options = md.Options
+			var o map[string]interface{}
+			err = json.Unmarshal([]byte(md.Options), &o)
+			if err != nil {
+				r.logger.Errorf("could not unmarshal check [%s] options", checkName)
+				return model.Checktypes{}, err
+			}
+			checktype.Options = o
 		}
 		if checktype.Assets == nil {
 			checktype.Assets = []string{}

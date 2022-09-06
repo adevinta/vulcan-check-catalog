@@ -18,5 +18,11 @@ jobs:
         run: go build -v ./...
       - name: Run coverage
         run: go test -race -coverprofile=coverage.out -covermode=atomic ./...
+      - name: Run e2e
+        run: |
+          go install ./...
+          git config --global url.https://github.com/.insteadOf git://github.com/
+          git clone https://github.com/adevinta/vulcan-checks.git
+          vulcan-check-catalog -registry-url "example.com" -tag "stable" vulcan-checks/cmd/
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
