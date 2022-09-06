@@ -5,7 +5,11 @@
 			"description": "Check1 description",
 			"image": "https://example.com/check1:stable",
 			"timeout": 3600,
-			"options": "{\"depth\": 2, \"active\": true, \"url\": \"http://example.com\"}",
+			"options": {
+				"active": true,
+				"depth": 2,
+				"url": "http://example.com"
+			},
 			"required_vars": null,
 			"assets": [
 				"WebAddress"

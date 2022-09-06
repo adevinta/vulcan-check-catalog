@@ -9,13 +9,13 @@ import (
 )
 
 type Checktype struct {
-	Name         string      `json:"name"`
-	Description  string      `json:"description"`
-	Image        string      `json:"image"`
-	Timeout      int         `json:"timeout"`
-	Options      string      `json:"options,omitempty"`
-	RequiredVars interface{} `json:"required_vars"`
-	Assets       []string    `json:"assets"`
+	Name         string                 `json:"name"`
+	Description  string                 `json:"description"`
+	Image        string                 `json:"image"`
+	Timeout      int                    `json:"timeout"`
+	Options      map[string]interface{} `json:"options,omitempty"`
+	RequiredVars interface{}            `json:"required_vars"`
+	Assets       []string               `json:"assets"`
 }
 
 type Checktypes struct {

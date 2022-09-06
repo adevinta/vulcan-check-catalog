@@ -82,7 +82,7 @@ func TestRun(t *testing.T) {
 						Description:  "Check1 description",
 						Image:        "example.com/check1:stable",
 						Timeout:      3600,
-						Options:      "{\"depth\": 2, \"active\": true, \"url\": \"http://example.com\"}",
+						Options:      map[string]interface{}{"active": true, "depth": 2.0, "url": "http://example.com"},
 						RequiredVars: nilSlice,
 						Assets:       []string{"WebAddress"},
 					},
@@ -157,7 +157,7 @@ func TestRun(t *testing.T) {
 				}
 			}
 			if !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("got %#v, want %#v", got, tt.want)
+				t.Errorf("\ngot:\n%#v\nwant:\n%#v", got, tt.want)
 			}
 		})
 	}
