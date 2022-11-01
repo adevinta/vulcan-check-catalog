@@ -3,7 +3,7 @@ module github.com/adevinta/vulcan-check-catalog
 go 1.19
 
 require (
-	github.com/BurntSushi/toml v1.2.0
+	github.com/BurntSushi/toml v1.2.1
 	github.com/sirupsen/logrus v1.9.0
 )
 
