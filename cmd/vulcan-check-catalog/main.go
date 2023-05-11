@@ -96,7 +96,7 @@ func realMain(out io.Writer) int {
 		return OKExitCode
 	}
 
-	f, err := os.OpenFile(output, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	f, err := os.OpenFile(output, os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		logger.Errorf("can't open file to write output: %s", err)
 		return KOExitCode
