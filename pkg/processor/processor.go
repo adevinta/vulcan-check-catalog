@@ -3,7 +3,7 @@ package processor
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"os"
 
 	"github.com/adevinta/vulcan-check-catalog/pkg/helpers"
 	"github.com/adevinta/vulcan-check-catalog/pkg/manifest"
@@ -41,7 +41,7 @@ func New(path, registryBaseURL, imageTag string, logger *log.Logger) Runner {
 }
 
 func (r *Runner) Run() (model.Checktypes, error) {
-	files, err := ioutil.ReadDir(r.path)
+	files, err := os.ReadDir(r.path)
 	if err != nil {
 		return model.Checktypes{}, err
 	}
