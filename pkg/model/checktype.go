@@ -3,7 +3,7 @@ package model
 import (
 	"encoding/json"
 	"errors"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"time"
 )
@@ -62,7 +62,7 @@ func FetchChecktypesFromURL(url string) (Checktypes, error) {
 	if res.StatusCode != 200 {
 		return Checktypes{}, errors.New("unexpected status code fetching checktypes from URL")
 	}
-	body, err := ioutil.ReadAll(res.Body)
+	body, err := io.ReadAll(res.Body)
 	if err != nil {
 		return Checktypes{}, err
 	}
